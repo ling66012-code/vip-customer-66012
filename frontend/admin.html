@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>通訊錄上傳（管理者用）</title>
+    <title>VIP客戶資料上傳（管理者用）</title>
     <script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
     <style>
         html, body {
@@ -160,7 +160,7 @@
 </head>
 <body>
     <div class="container">
-        <h1>通訊錄上傳</h1>
+        <h1>VIP資料上傳</h1>
         <p class="system-remark">
             上傳後會直接更新後端資料庫，「通訊錄查詢」頁面立即就能查到最新資料，不需要再手動搬檔案。<br>
             使用方式：① 選擇 Excel 檔（第一列須為欄位名稱）② 輸入管理密碼 ③ 按「上傳並更新資料庫」。
@@ -216,7 +216,7 @@
             const worksheet = XLSX.utils.aoa_to_sheet(worksheetData);
             const workbook = XLSX.utils.book_new();
             XLSX.utils.book_append_sheet(workbook, worksheet, '通訊錄');
-            XLSX.writeFile(workbook, '通訊錄格式範本.xlsx');
+            XLSX.writeFile(workbook, 'VIP資料格式範本.xlsx');
         });
 
         function setStatus(text, type) {
